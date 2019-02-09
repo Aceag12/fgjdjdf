@@ -163,14 +163,14 @@ async def roll(ctx):
     await client.say(embed=em)
 @client.command(pass_context = True)
 async def charliecharlie(ctx):
-    choices = ['Yes!', 'No!', 'No!', 'Yes!']
+    choices = ['Yes!', 'No!']
     color = discord.Color(value=0x00ff00)
-    em = discord.Embed(color=color, title='Its Charlie Here', description=random.choice(choices))
+    em = discord.Embed(color=color, title='Charlie Charlie answer', description=random.choice(choices))
     await client.send_typing(ctx.message.channel)
     await client.say(embed=em)    
 @client.command(pass_context = True)
 async def howgay(ctx):
-    choices = ['50%', '20%', '30%', '40%', '10%', '60%', '70%','80%', '90%', '100%', 'You Are Not Gay!']
+    choices = ['10%', '20%', '30%', '40%', '50%', '60%', '70%','80%', '90%', '100%', 'You Are Not Gay!']
     color = discord.Color(value=0x00ff00)
     em = discord.Embed(color=color, title='Gay Percentage', description=random.choice(choices))
     await client.send_typing(ctx.message.channel)
@@ -190,7 +190,7 @@ async def addchannel(ctx, channel: str=None):
         await client.say("Please specify a channel name")
     else:
         if ctx.message.author.server_permissions.administrator == False:
-            await client.say('**You do not have permission to use this command**')
+            await client.say('**Sorry! You do not have permission to use this command**')
             return
         else:
             everyone_perms = discord.PermissionOverwrite(send_messages=None, read_messages=None)
@@ -341,26 +341,26 @@ async def on_member_remove(member):
 async def virus(ctx,user: discord.Member=None,*,hack=None):
     nome = ctx.message.author
     if not hack:
-        hack = 'discord'
+        hack = 'discord user'
     else:
         hack = hack.replace(' ','_')
     channel = ctx.message.channel
-    x = await client.send_message(channel, '``[▓▓▓                    ] / {}-virus.exe Packing files.``'.format(hack))
+    x = await client.send_message(channel, '``[▓▓▓                    ] / {}-discordvirus.exe Packing files.``'.format(hack))
     await asyncio.sleep(1.5)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓                ] - {}-virus.exe Packing files..``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓                ] - {}-discordvirus.exe Packing files..``'.format(hack))
     await asyncio.sleep(0.3)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓           ] \ {}-virus.exe Packing files...``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓           ] \ {}-discordvirus.exe Packing files...``'.format(hack))
     await asyncio.sleep(1.2)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓         ] | {}-virus.exe Initializing code.``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓         ] | {}-discordvirus.exe is Initializing code.``'.format(hack))
     await asyncio.sleep(1)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      ] / {}-virus.exe Initializing code..``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      ] / {}-discordvirus.exe is Initializing code..``'.format(hack))
     await asyncio.sleep(1.5)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   ] - {}-virus.exe Finishing.``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   ] - {}-discordvirus.exe Finishing.``'.format(hack))
     await asyncio.sleep(1)
-    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ] \ {}-virus.exe Finishing..``'.format(hack))
+    x = await client.edit_message(x,'``[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ] \ {}-discordvirus.exe Finishing..``'.format(hack))
     await asyncio.sleep(1)
     x = await client.edit_message(x,'``Successfully downloaded {}-virus.exe``'.format(hack))
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     x = await client.edit_message(x,'``Injecting virus.   |``')
     await asyncio.sleep(0.5)
     x = await client.edit_message(x,'``Injecting virus..  /``')
