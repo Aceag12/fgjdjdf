@@ -755,4 +755,4 @@ async def stats(ctx, *args):
     await client.send_message(ctx.message.channel, embed=em)
     await client.delete_message(ctx.message)	
 
-client.run(os.getenv('bottoken'))
+client.run(os.getenv('fgjdjdf'))
